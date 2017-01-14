@@ -1,0 +1,97 @@
+.body {
+  padding: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+ul.days {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+li.day {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  text-align: center;
+  width: 20px;
+  height: 10px;
+  margin: 1px;
+  padding: 0 10px;
+  list-style: none;
+  list-style-position: outside;
+}
+
+.contributions {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+.contributions-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+.contributions-legend {
+  display: flex;
+  align-items: center;
+}
+
+.contributions-legend .legend {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.contributions-legend .legend li {
+  display: inline-block;
+}
+
+.row {
+  margin: 1px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.rectangle {
+  width: 10px;
+  height: 10px;
+  margin: 0 1px;
+}
+
+.rectangle-1 {
+  background-color: #eee;
+}
+
+.rectangle-2 {
+  background-color: #d6e685;
+}
+
+.rectangle-3 {
+  background-color: #8cc665;
+}
+
+.rectangle-4 {
+  background-color: #44a340;
+}
+
+.rectangle-5 {
+  background-color: #1e6823;
+}

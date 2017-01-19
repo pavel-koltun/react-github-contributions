@@ -11,14 +11,14 @@ class Rectangle extends React.Component {
   }
 
   onClick() {
-    this.props.cellClick(this.props.cellId);
+    this.props.cellClick(this.props.date);
   }
 
   render() {
     return (
-      <span
+      <div
+        onMouseDown={this.onClick}
         className={`rectangle rectangle-${this.props.styleIndex}`}
-        onClick={this.onClick}
       />
     );
   }
@@ -26,7 +26,7 @@ class Rectangle extends React.Component {
 
 Rectangle.propTypes = {
   cellClick: React.PropTypes.func.isRequired,
-  cellId: React.PropTypes.string.isRequired,
+  date: React.PropTypes.string.isRequired,
   styleIndex: React.PropTypes.number.isRequired,
 };
 
@@ -35,5 +35,5 @@ Rectangle.defaultProps = {
 };
 
 export default connect((state, ownProps) => ({
-  styleIndex: state.styles[ownProps.cellId],
+  styleIndex: state.styles[ownProps.date],
 }), { cellClick })(Rectangle);

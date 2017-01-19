@@ -1,5 +1,8 @@
-.body {
+body {
   padding: 10px;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(252, 252, 252);
+  font-family: Roboto, sans-serif;
 }
 
 .title {
@@ -32,6 +35,13 @@ li.day {
   list-style-position: outside;
 }
 
+.contributions-panel {
+  padding: 1rem 3rem;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14),
+    0 1px 1px 1px rgba(0,0,0,0.2),
+    0 1px 0 -1px rgba(0,0,0,0.1);
+}
+
 .contributions {
   display: flex;
   flex-flow: column wrap;
@@ -44,6 +54,7 @@ li.day {
   justify-content: space-between;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 8pt;
+  margin: 5px 0;
 }
 
 .contributions-legend {
@@ -73,10 +84,7 @@ li.day {
 .rectangle {
   width: 10px;
   height: 10px;
-  margin: 0 1px;
-}
-
-.rectangle-1 {
+  margin: 1px;
   background-color: #eee;
 }
 
@@ -94,4 +102,107 @@ li.day {
 
 .rectangle-5 {
   background-color: #1e6823;
+}
+
+/* --- DELETE */
+.container-flex {
+  display: flex;
+}
+
+.container-flex.row-wrap {
+  flex-flow: row wrap;
+}
+
+.container-flex.row-nowrap {
+  flex-flow: row nowrap;
+}
+
+.container-flex.column-nowrap {
+  flex-flow: column nowrap;
+}
+
+.container-flex.column-wrap {
+  flex-flow: column wrap;
+}
+
+.container-flex.justify-center {
+  justify-content: center;
+}
+
+.container-flex.justify-start {
+  justify-content: flex-start;
+}
+
+.container-flex.space-between {
+  justify-content: space-between;
+}
+
+.container-flex.align-center {
+  align-items: center;
+}
+
+.green {
+  background-color: green;
+}
+
+.component-100 {
+  height: 100px;
+  width: 100px;
+}
+
+.component-50 {
+  height: 50px;
+  width: 50px;
+}
+
+.component-10 {
+  height: 10px;
+  width: 10px;
+  margin: 1px;
+}
+
+.contributions-header {
+  height: 12px;
+  padding-bottom: 5px;
+}
+
+.legend-block,
+.month,
+.day {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+.button {
+  height: 24px;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+
+.reset {
+  margin-right: 5px;
+}
+
+.legend-block {
+  margin-left: 5px;
+}
+
+.legend {
+  list-style: none;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.legend li {
+  display: inline-block;
+}
+
+.day {
+  list-style: none;
+  width: 30px;
+  padding-left: 2px;
+}
+
+.day li {
+  display: inline-block;
 }

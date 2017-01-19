@@ -4,8 +4,8 @@
     "browser": true
   },
   "rules": {
-    "react/jsx-closing-bracket-location": [
-      2, {nonEmpty: "after-props"}
-    ]
+    'react/jsx-closing-bracket-location': [2, {'nonEmpty': 'after-props'}],
+    'react/prop-types': [1, { skipUndeclared: true }],
+    'no-confusing-arrow': ['error', {'allowParens': true}]
   }
 }

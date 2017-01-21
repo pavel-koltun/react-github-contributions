@@ -1,7 +1,7 @@
 body {
-  padding: 10px;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: rgb(252, 252, 252);
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(3, 3, 3, 0.8);
   font-family: Roboto, sans-serif;
 }
 
@@ -36,10 +36,9 @@ li.day {
 }
 
 .contributions-panel {
-  padding: 1rem 3rem;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14),
-    0 1px 1px 1px rgba(0,0,0,0.2),
-    0 1px 0 -1px rgba(0,0,0,0.1);
+  /*padding: 1rem 3rem;*/
+  width: 100%;
+  box-shadow: 0 5px 10px 1px rgba(0,0,0,0.24);
 }
 
 .contributions {
@@ -55,6 +54,7 @@ li.day {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 8pt;
   margin: 5px 0;
+  line-height: 24px;
 }
 
 .contributions-legend {
@@ -81,9 +81,17 @@ li.day {
   justify-content: center;
 }
 
+.column {
+  width: 17px;
+}
+
+.row {
+  height: 17px;
+}
+
 .rectangle {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   margin: 1px;
   background-color: #eee;
 }
@@ -162,7 +170,7 @@ li.day {
 }
 
 .contributions-header {
-  height: 12px;
+  height: 16px;
   padding-bottom: 5px;
 }
 

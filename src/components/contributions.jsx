@@ -18,7 +18,7 @@ class Contributions extends React.Component {
             {_.chunk(this.props.dates, 7).map((weekDates, columnIndex) =>
               <div
                 key={columnIndex}
-                className="container-flex column-nowrap" style={{ width: '12px' }}>
+                className="container-flex column-nowrap column">
                 {weekDates.map((date, rowIndex) =>
                   <Rectangle key={rowIndex} date={date.format('YYYY-MM-DD')} />
                 )}

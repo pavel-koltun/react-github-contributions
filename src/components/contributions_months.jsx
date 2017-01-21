@@ -66,12 +66,19 @@ export default props => {
 
   return (
     <div className="container-flex row-nowrap contributions-header month">
-      {_.keys(weekCountPerYear).map(year => months.map(month =>
-        <div
-          key={month.index}
-          style={{ width: `${12 * weekCountPerYear[year][month.name]}px` }}>
-          {month.name}
-        </div>))}
+      {_.keys(weekCountPerYear).map(year => months.map((month) => {
+        const weekCount = weekCountPerYear[year][month.name];
+
+        const emptyColumns = weekCount > 2 ? _.range(weekCount - 1)
+          .map(() => <div className="column" />) : null;
+
+        return (
+          <div className="container-flex">
+            <div key={month.index} className="column">{month.name}</div>
+            {emptyColumns}
+          </div>
+        );
+      }))}
     </div>
   );
 };

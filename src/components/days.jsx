@@ -14,6 +14,6 @@ export default () =>
   <div className="container-flex column-nowrap">
     <div className="contributions-header" />
     <ul className="container-flex column-nowrap day" style={{ marginTop: '0' }}>
-      {days.map(day => <li style={{ height: '12px' }} key={day.index}>{day.name}</li>)}
+      {days.map(day => <li className="row" key={day.index}>{day.name}</li>)}
     </ul>
   </div>;

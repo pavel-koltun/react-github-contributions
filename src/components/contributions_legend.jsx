@@ -6,7 +6,7 @@ export default () => (
     Less
     <ul className="container-flex legend row-nowrap">
       <li className="rectangle" />
-      {_.range(2, 5).map(index => index + 1).map(styleIndex => (
+      {_.range(2, 6).map(styleIndex => (
         <li key={styleIndex} className={`rectangle rectangle-${styleIndex}`} />
       ))}
     </ul>

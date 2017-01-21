@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import { cellClick } from '../actions';
 
 class Rectangle extends React.Component {
@@ -16,10 +17,14 @@ class Rectangle extends React.Component {
 
   render() {
     return (
-      <div
-        onMouseDown={this.onClick}
-        className={`rectangle rectangle-${this.props.styleIndex}`}
-      />
+      <div>
+        <div
+          onMouseDown={this.onClick}
+          data-tip={this.props.date}
+          className={`rectangle rectangle-${this.props.styleIndex}`}
+        />
+      </div>
+
     );
   }
 }

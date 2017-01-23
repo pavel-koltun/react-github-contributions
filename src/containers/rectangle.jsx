@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { cellClick } from '../actions';
+import { cellClick, DATE_FORMAT } from '../actions';
 
 class Rectangle extends React.Component {
 
@@ -20,7 +20,8 @@ class Rectangle extends React.Component {
       <div>
         <div
           onMouseDown={this.onClick}
-          data-tip={this.props.date}
+          data-tip={this.props.date.format(DATE_FORMAT)}
+          data-delay-show="500"
           className={`rectangle rectangle-${this.props.styleIndex}`}
         />
       </div>
@@ -31,7 +32,7 @@ class Rectangle extends React.Component {
 
 Rectangle.propTypes = {
   cellClick: React.PropTypes.func.isRequired,
-  date: React.PropTypes.string.isRequired,
+  date: React.PropTypes.object.isRequired,
   styleIndex: React.PropTypes.number.isRequired,
 };
 
@@ -40,5 +41,5 @@ Rectangle.defaultProps = {
 };
 
 export default connect((state, ownProps) => ({
-  styleIndex: state.styles[ownProps.date],
+  styleIndex: state.styles[ownProps.date.format(DATE_FORMAT)],
 }), { cellClick })(Rectangle);

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import ContributionsLegend from './contributions_legend';
-import ContributionsReset from './contributions_reset';
+import ContributionsActions from './contributions_actions';
 
-export default ({ onResetClick }) => (
+export default () => (
   <div className="container-flex space-between contributions-footer">
-    <ContributionsReset onResetClick={onResetClick} />
+    <ContributionsActions />
     <ContributionsLegend />
   </div>
 );

@@ -4,13 +4,15 @@ import ReactTooltip from 'react-tooltip';
 import Contributions from './contributions';
 import Days from './days';
 import Header from './header';
+import Script from './script';
 
 export default () =>
-  <div className="container-flex column-nowrap align-center">
+  <div className="container container-flex column-nowrap align-center">
     <Header />
+    <ReactTooltip place="top" type="dark" effect="solid" />
     <div className="container-flex row-nowrap justify-center contributions-panel">
       <Days />
-      <Contributions rows={7} columns={50} />
-      <ReactTooltip place="top" type="dark" effect="solid" />
+      <Contributions />
     </div>
+    <Script />
   </div>;

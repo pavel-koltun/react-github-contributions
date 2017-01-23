@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
-import { resetCells } from '../actions';
 import ContributionsMonths from './contributions_months';
 import Rectangle from '../containers/rectangle';
 import ContributionsFooter from './contributions_footer';
@@ -20,11 +19,11 @@ class Contributions extends React.Component {
                 key={columnIndex}
                 className="container-flex column-nowrap column">
                 {weekDates.map((date, rowIndex) =>
-                  <Rectangle key={rowIndex} date={date.format('YYYY-MM-DD')} />
+                  <Rectangle key={rowIndex} date={date} />
                 )}
               </div>)}
           </div>
-          <ContributionsFooter onResetClick={this.props.resetCells} />
+          <ContributionsFooter />
         </div>
       </div>
     );
@@ -33,5 +32,4 @@ class Contributions extends React.Component {
 
 export default connect(state => ({
   dates: state.dates,
-  year: state.year,
-}), { resetCells })(Contributions);
+}))(Contributions);

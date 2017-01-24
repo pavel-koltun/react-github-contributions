@@ -2,9 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 
 export default () => (
-  <div className="container-flex align-center legend-block">
+  <div className="contributions-legend">
     Less
-    <ul className="container-flex legend row-nowrap">
+    <ul>
       <li className="rectangle" />
       {_.range(2, 6).map(styleIndex => (
         <li key={styleIndex} className={`rectangle rectangle-${styleIndex}`} />

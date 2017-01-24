@@ -9,7 +9,7 @@ export default connect(state => ({
   }
 
   return (
-    <pre className="script">
+    <pre>
       {script}
     </pre>
   );

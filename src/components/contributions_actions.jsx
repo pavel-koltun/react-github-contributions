@@ -20,13 +20,13 @@ class ContributionsActions extends React.Component {
 
   render() {
     if (!this.props.hasChanges) {
-      return (<div className="container-flex" />);
+      return (<div className="contributions-actions" />);
     }
 
     return (
-      <div className="container-flex">
-        <button onClick={this.props.resetCells} className="button reset">Reset</button>
-        <button onClick={this.onGenerateClick} className="button">Generate</button>
+      <div className="contributions-actions">
+        <button onClick={this.props.resetCells}>Reset</button>
+        <button onClick={this.onGenerateClick}>Generate</button>
       </div>
     );
   }

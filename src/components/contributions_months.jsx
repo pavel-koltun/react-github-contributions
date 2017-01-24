@@ -17,11 +17,10 @@ const months = [
   { index: 11, name: 'Dec' },
 ];
 
-export default props => {
-
+export default (props) => {
   const { dates, daysInColumn } = props;
 
-  const monthOnWeeks = _.chunk(dates, daysInColumn).reduce((state, current, index) => {
+  const monthOnWeeks = _.chunk(dates, daysInColumn).reduce((state, current) => {
     const monthsAtWeek = current.reduce(
       (weekState, day) => {
         const year = day.format('YYYY');
@@ -65,7 +64,7 @@ export default props => {
   const weekCountPerYear = _.pickBy(monthOnWeeks, value => _.keys(value).length > 1);
 
   return (
-    <div className="container-flex row-nowrap contributions-header month">
+    <div className="contributions-months">
       {_.keys(weekCountPerYear).map(year => months.map((month) => {
         const weekCount = weekCountPerYear[year][month.name];
 

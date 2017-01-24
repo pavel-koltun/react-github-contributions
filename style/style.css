@@ -14,6 +14,9 @@ body {
 }
 
 .contributions-panel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
   width: 100%;
   box-shadow: 9px 5px 5px 5px rgba(0,0,0,0.24);
   padding: 1rem 0;
@@ -21,8 +24,15 @@ body {
 
 .contributions {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
+}
+
+.contributions-header,
+.contributions-months {
+  height: 16px;
+  padding-bottom: 5px;
+  margin-left: 1px;
 }
 
 .contributions-footer {
@@ -35,19 +45,49 @@ body {
   line-height: 24px;
 }
 
-.row {
-  margin: 1px 0;
+.contributions-months {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+.contributions-days {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.contributions-days ul {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 0;
+  padding-left: 2px;
+  list-style: none;
+  width: 30px;
+}
+
+.contributions-days ul li {
+  padding: 0;
+  height: 17px;
+  line-height: 17px;
+}
+
+.contributions-legend {
+  display: flex;
+  align-items: center;
+}
+
+.contributions-legend ul {
+  display: flex;
+  list-style: none;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.contributions-actions {
+  display: flex;
 }
 
 .column {
   width: 17px;
-}
-
-.row {
-  height: 17px;
 }
 
 .rectangle {
@@ -55,7 +95,6 @@ body {
   height: 15px;
   margin: 1px;
   background-color: #eee;
-  cursor: pointer;
 }
 
 .rectangle-2 {
@@ -86,50 +125,13 @@ body {
   flex-flow: column nowrap;
 }
 
-.container-flex.justify-center {
-  justify-content: center;
-}
-
-.container-flex.space-between {
-  justify-content: space-between;
-}
-
 .container-flex.align-center {
   align-items: center;
 }
 
-.contributions-header {
-  height: 16px;
-  padding-bottom: 5px;
-}
-
-.legend-block,
-.month,
-.day {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+.contributions-header,
+.contributions-footer,
+.contributions-months,
+.contributions-days {
   font-size: 8pt;
-}
-
-.legend-block {
-  margin-left: 5px;
-}
-
-.legend {
-  list-style: none;
-  margin: 0 5px;
-  padding: 0;
-}
-
-.legend li {
-  display: inline-block;
-}
-
-.day {
-  list-style: none;
-  width: 30px;
-  padding-left: 2px;
-}
-
-.day li {
-  display: inline-block;
 }

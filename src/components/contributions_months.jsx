@@ -23,6 +23,10 @@ export default (props) => {
   const monthOnWeeks = _.chunk(dates, daysInColumn).reduce((state, current) => {
     const monthsAtWeek = current.reduce(
       (weekState, day) => {
+        if (_.isEmpty(day)) {
+          return weekState;
+        }
+
         const year = day.format('YYYY');
         const month = day.format('MMM');
 
@@ -69,7 +73,7 @@ export default (props) => {
         const weekCount = weekCountPerYear[year][month.name];
 
         const emptyColumns = weekCount > 2 ? _.range(weekCount - 1)
-          .map(() => <div className="column" />) : null;
+          .map((weekIndex) => <div className="column" key={weekIndex} />) : null;
 
         return (
           <div className="container-flex">

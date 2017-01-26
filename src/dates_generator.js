@@ -1,12 +1,11 @@
 import moment from 'moment';
 
-const generateDatesRange = (startDate, endDate) => {
+const generateRange = (start, end) => {
   const dates = [];
 
-  let currentDate = moment(startDate);
-  const stopDate = moment(endDate);
+  let currentDate = moment(start);
 
-  while (currentDate <= stopDate) {
+  while (currentDate <= end) {
     dates.push(currentDate);
     currentDate = moment(currentDate).add(1, 'days');
   }
@@ -43,13 +42,12 @@ const completeDatesRangeToLastDayOfWeek = (dates) => {
   return dates;
 };
 
-export const generateDatesRangeInYear = (year = moment().year(), complete = false) => {
-  let dates = generateDatesRange(
-    moment(`${year}-01-01 00:00 +00:00`, 'YYYY-MM-DD HH:mm Z'),
-    moment().year() !== year || complete ? moment(`${year}-12-31 00:00 +00:00`, 'YYYY-MM-DD HH:mm Z') : moment(),
-  );
-  dates = completeDatesRangeToStartDayOfWeek(dates);
-  dates = completeDatesRangeToLastDayOfWeek(dates);
+export const generateDatesRangeInYear = (year = moment().year(), options = {}) => {
+  const currentMoment = moment();
 
-  return dates;
+  const start = moment(`${year}-01-01 00:00 +00:00`, 'YYYY-MM-DD HH:mm Z');
+  const end = currentMoment.year() !== year || options.complete ?
+    moment(`${year}-12-31 00:00 +00:00`, 'YYYY-MM-DD HH:mm Z') : currentMoment;
+
+  return generateRange(start, end);
 };

@@ -10,14 +10,20 @@ import ContributionsFooter from './contributions_footer';
 class Contributions extends React.Component {
 
   render() {
+
+    const dates = _.concat(
+      _.range(0, this.props.dates[0].day()).map(() => ({})),
+      this.props.dates,
+    );
+
     return (
       <div className="contributions-panel">
         <Days />
         <div className="contributions">
-          <ContributionsMonths dates={this.props.dates} daysInColumn={7} />
+          <ContributionsMonths dates={dates} daysInColumn={7} />
           <div className="container-flex column-nowrap">
             <div className="container-flex row-nowrap">
-              {_.chunk(this.props.dates, 7).map((weekDates, columnIndex) =>
+              {_.chunk(dates, 7).map((weekDates, columnIndex) =>
                 <div
                   key={columnIndex}
                   className="container-flex column-nowrap column">

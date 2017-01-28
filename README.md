@@ -15,7 +15,7 @@ Please note, that script doesn't take into account your existing GitHub activity
 
 ![application](https://cloud.githubusercontent.com/assets/5333145/22349236/df204574-e41f-11e6-8a83-5135b4166636.png)
 
-To see the live version of the app go
+To see the live version of the app go [http://github-react-contributions.surge.sh](http://github-react-contributions.surge.sh)
 
 ## Result
 
